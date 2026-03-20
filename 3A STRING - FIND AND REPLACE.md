@@ -1,30 +1,40 @@
 # Exp.No:3a
-## STRING - FIND AND REPLACE
-
----
+## STRING - CASE CONVERSION AND SPECIAL CHARACTER REPLACEMENT
 
 ### AIM  
-To write a Python function to accept a string, identify a word to be replaced, and replace it with a new word provided by the user.
-
----
+To write a Python program that demonstrates string manipulation using character case conversion and special character replacement.
 
 ### ALGORITHM
 
-1. Begin the program.  
-2. Input the original string `str1` and the word to be replaced `replace_str`.  
-3. Ask the user to input the new replacement word `str2`.  
-4. Use the `replace()` method in Python to replace all occurrences of `replace_str` in `str1` with `str2`.  
-5. Store the modified string in `str3`.  
-6. Display the original string (`str1`) and the modified string (`str3`).  
-7. Terminate the program.
-
----
+1. Begin the program.
+2. Define the function convert(str1) to process the input string.
+3. Initialize an empty string result.
+4. Traverse each character in str1:
+5. If the character is uppercase, convert it to lowercase using .lower().
+6. If the character is lowercase, convert it to uppercase using .upper().
+7. If the character is not alphanumeric (i.e., a special character), append "bb" instead.
+8. Return or print the transformed string.
+9. Terminate the program.
 
 ### PROGRAM
 
 ```
+def convert(n):
+    s=""
+    for i in n:
+        if i.islower():
+            s = s + i.upper()
+        elif i.isupper():
+            s = s + i.lower()
+        else:
+            s = s + "bb"
+    print(s)
 ```
 
 ### OUTPUT
 
+![image](https://github.com/user-attachments/assets/0c0ea4cf-e562-4145-ad29-27d2c9142f19)
+
+
 ### RESULT
+Thus the Python program is successfully transformed the string according to the specified rules.
